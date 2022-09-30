@@ -156,7 +156,6 @@ class _MoviesScreenState extends State<MoviesScreen> {
                             FutureBuilder<Movies>(
                               future: latestMovies,
                               builder: ((context, snapshot) {
-                                print(snapshot.data.name);
                                 return snapshot.hasData
                                     ? Container(
                                         margin: EdgeInsets.only(
