@@ -25,7 +25,6 @@ class MoviesApi {
         await http.get(Uri.parse('$url/movie/latest?api_key=$apiKey&page=1'));
     if (response.statusCode == 200) {
       Map<String, dynamic> json = jsonDecode(response.body);
-      print(json['title']);
       return Movies.fromJson(json);
     } else {
       return Future.error("Error");
